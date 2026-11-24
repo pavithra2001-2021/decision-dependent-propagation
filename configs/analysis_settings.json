@@ -1,0 +1,43 @@
+{
+ "p6.exp_confirm": {
+  "SEED": 20261024,
+  "R": 100,
+  "METHODS": [
+   "J_cbb",
+   "J_iid",
+   "J_iidm",
+   "J_xdfjoint",
+   "J_xdfadaptjoint",
+   "I_xdf",
+   "I_xdf_adaptive",
+   "I_cbb",
+   "ISO",
+   "uHAC"
+  ]
+ },
+ "p6.exp_retest": {
+  "METHODS": [
+   "analytic_iid",
+   "iid_bootstrap",
+   "cbb",
+   "hac_bartlett"
+  ],
+  "R": 100,
+  "T_FULL": 488,
+  "SEED": 20261023,
+  "FD_MAX": 0.2,
+  "METHODS_X": [
+   "analytic_iid",
+   "iid_bootstrap",
+   "cbb",
+   "hac_bartlett",
+   "xdf"
+  ]
+ },
+ "p6.uncertainty": {},
+ "common": {
+  "SEED_C": 20261024,
+  "SEED_B": 20261023,
+  "R": 100
+ }
+}

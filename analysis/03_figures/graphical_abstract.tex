@@ -1,0 +1,55 @@
+% Graphical abstract (landscape; readable at 13 cm width). Numbers are macros from 02_manuscript/values.tex.
+\documentclass[10pt,tikz,border=2pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\input{../02_manuscript/values.tex}
+\input{../02_manuscript/values_extra.tex}
+\definecolor{ink}{HTML}{222222}
+\definecolor{joint}{HTML}{0072B2}
+\definecolor{indep}{HTML}{D55E00}
+\definecolor{sky}{HTML}{56B4E9}
+\definecolor{grey}{HTML}{8C8C8C}
+\definecolor{band}{HTML}{F3F3F1}
+\begin{document}
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\small,>={Stealth[length=2.2mm,width=1.8mm]},
+  ttl/.style={font=\sffamily\bfseries\normalsize,text=ink,align=left,anchor=north west},
+  txt/.style={font=\sffamily\footnotesize,text=ink,align=left,anchor=north west,text width=51mm}]
+\fill[band,rounded corners=2pt] (0,0) rectangle (56,62);
+\fill[band,rounded corners=2pt] (62,0) rectangle (118,62);
+\fill[band,rounded corners=2pt] (124,0) rectangle (180,62);
+\draw[->,line width=1.1pt,ink] (56.5,31) -- (61.5,31);
+\draw[->,line width=1.1pt,ink] (118.5,31) -- (123.5,31);
+% ---------------- panel 1
+\node[ttl] at (2,60) {1\enspace ML inputs are estimated};
+\foreach \k/\c in {0/joint,1/sky,2/grey}{
+  \draw[\c,line width=0.8pt] plot[smooth,domain=0:22,samples=40] ({4+\x},{46-6*\k+1.6*sin(40*\x+70*\k)+0.8*sin(110*\x)});}
+\node[font=\sffamily\footnotesize,text=ink] at (15,28) {time series};
+\draw[->,line width=0.8pt,ink] (28,40) -- (32,40);
+\foreach \i in {0,...,5}{\foreach \j in {0,...,5}{
+  \pgfmathsetmacro{\v}{abs(sin(53*\i+37*\j))*70+10}
+  \fill[joint!\v] ({34+3.2*\i},{50-3.2*\j}) rectangle ++(3.1,-3.1);}}
+\node[font=\sffamily\footnotesize,text=ink,align=center] at (43.5,26.5) {connectome\\[0.5mm]{$\hat{\mathbf z}\in\mathbb{R}^{E}$}};
+\node[txt] at (2,17) {Estimation errors of the $E$ features are \textbf{correlated} (shared regions, global fluctuations).};
+% ---------------- panel 2
+\node[ttl] at (64,60) {2\enspace Uncertainty depends on $\mathbf w$};
+\node[font=\sffamily\small,text=ink] at (90,48.5) {$\kappa(\mathbf w)=\dfrac{\mathbf w^{\top}\Sigma\,\mathbf w}{\mathbf w^{\top}D\,\mathbf w}$};
+\draw[grey,line width=0.4pt] (70,22) -- (114,22);
+\fill[grey] (73,22) rectangle ++(9,1.6);
+\fill[joint] (88,22) rectangle ++(9,{1.6+6.5*log10(\xKappaDOneMed)});
+\fill[indep] (103,22) rectangle ++(9,{1.6+6.5*log10(\xKappaDTwoMed)});
+\node[font=\sffamily\scriptsize,text=ink,anchor=south] at (77.5,24) {\xKappaDThreeMed};
+\node[font=\sffamily\scriptsize,text=ink,anchor=south] at (92.5,{24+6.5*log10(\xKappaDOneMed)}) {\xKappaDOneMed};
+\node[font=\sffamily\scriptsize,text=ink,anchor=south] at (107.5,{24+6.5*log10(\xKappaDTwoMed)}) {\xKappaDTwoMed};
+\node[font=\sffamily\scriptsize,text=ink,anchor=north] at (77.5,21.5) {random};
+\node[font=\sffamily\scriptsize,text=ink,anchor=north] at (92.5,21.5) {classifier};
+\node[font=\sffamily\scriptsize,text=ink,anchor=north] at (107.5,21.5) {global mean};
+\node[txt] at (64,14) {\textbf{uHAC}: closed-form projected influence series with a HAC step; deterministic, no $E\times E$ covariance.};
+% ---------------- panel 3
+\node[ttl] at (126,60) {3\enspace Borrowing a calibration scale};
+\node[txt,text width=52mm] at (126,51) {Exploratory: a scale learned on one decision worked on the \textbf{joint} variance: \textbf{\rTrCovJLo--\rTrCovJHi\%} coverage across \rTrN{} decisions, against \rTrCovILo--\rTrCovIHi\% on the independent scale (\nFinal{} participants).\\[2.4mm]
+Gains came where amplification differed between decisions.};
+\end{tikzpicture}
+\end{document}

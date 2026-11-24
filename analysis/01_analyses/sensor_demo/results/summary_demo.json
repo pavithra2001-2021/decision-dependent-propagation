@@ -1,0 +1,68 @@
+{
+ "K": 20,
+ "T": 200,
+ "E": 190,
+ "decisions": {
+  "random": {
+   "kappa_true": 0.8624648096665448,
+   "kappa_hat_median": 0.8350655429610522,
+   "sd_ratio_J_over_true_median": 0.8857929154189744,
+   "sd_ratio_uHAC_over_J_median": 0.9887880593318061,
+   "vcr_joint_raw": 0.7974932519890402,
+   "vcr_indep_raw": 0.9062099814256128,
+   "cov_joint_raw": 0.8933333333333333,
+   "cov_indep_raw": 0.9333333333333333,
+   "transfer": {
+    "cov_joint": 0.95,
+    "vcr_joint": 1.089702516323718,
+    "cov_indep": 1.0,
+    "vcr_indep": 4.1061593698224055
+   }
+  },
+  "sum": {
+   "kappa_true": 21.899036319058382,
+   "kappa_hat_median": 20.32337776543504,
+   "sd_ratio_J_over_true_median": 0.8645430184772337,
+   "sd_ratio_uHAC_over_J_median": 0.9937274835877579,
+   "vcr_joint_raw": 0.7825727487049627,
+   "vcr_indep_raw": 0.03508318423326685,
+   "cov_joint_raw": 0.91,
+   "cov_indep_raw": 0.29,
+   "transfer": {
+    "cov_joint": 0.94,
+    "vcr_joint": 1.0690993790483152,
+    "cov_indep": 0.58,
+    "vcr_indep": 0.1589615771211837
+   }
+  },
+  "contrast": {
+   "kappa_true": 2.795449626816234,
+   "kappa_hat_median": 2.664754785661255,
+   "sd_ratio_J_over_true_median": 0.8707874343812109,
+   "sd_ratio_uHAC_over_J_median": 1.0009284441992343,
+   "vcr_joint_raw": 0.7443268059838005,
+   "vcr_indep_raw": 0.26229831702862116,
+   "cov_joint_raw": 0.8966666666666666,
+   "cov_indep_raw": 0.67,
+   "transfer": {
+    "cov_joint": 0.94,
+    "vcr_joint": 1.0173550293731468,
+    "cov_indep": 0.9666666666666667,
+    "vcr_indep": 1.188471202439064
+   }
+  },
+  "trained": {
+   "kappa_true": 3.529562031528354,
+   "kappa_hat_median": 3.4444677022815315,
+   "sd_ratio_J_over_true_median": 0.8943033881136055,
+   "sd_ratio_uHAC_over_J_median": 1.003975236408622,
+   "vcr_joint_raw": 0.7916013296810703,
+   "vcr_indep_raw": 0.22149237738380836,
+   "cov_joint_raw": 0.92,
+   "cov_indep_raw": 0.6033333333333334
+  }
+ },
+ "median_scale_joint": 1.3765610312335617,
+ "median_scale_indep": 4.570155371610518,
+ "classifier_train_accuracy": 0.985
+}

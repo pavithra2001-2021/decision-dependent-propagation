@@ -1,0 +1,103 @@
+{
+ "note": "additional runtime benchmark on synthetic series; median wall-clock seconds per participant-run and decision; J-CBB = 100 circular-block replicates + decision SD; uHAC = projected-influence HAC (Bartlett); xDF = Tukey edge variances only (no propagation); fixed estimator code; block length fixed at 3",
+ "machine": {
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD",
+  "python": "3.12.10",
+  "numpy": "2.4.4",
+  "processor_note": "AMD Ryzen 7 7840HS laptop CPU (8 cores), default multithreaded BLAS"
+ },
+ "date": "2026-10-26",
+ "rows": [
+  {
+   "T": 170,
+   "N": 50,
+   "E": 1225,
+   "cbb_R100_s": 0.008748300024308264,
+   "uhac_s": 0.00042829994345083833,
+   "xdf_tukey_s": 0.0008577000116929412,
+   "reps": 9
+  },
+  {
+   "T": 170,
+   "N": 116,
+   "E": 6670,
+   "cbb_R100_s": 0.02803769998718053,
+   "uhac_s": 0.0009699999936856329,
+   "xdf_tukey_s": 0.0034457999863661826,
+   "reps": 9
+  },
+  {
+   "T": 170,
+   "N": 200,
+   "E": 19900,
+   "cbb_R100_s": 0.09134410001570359,
+   "uhac_s": 0.001796299999114126,
+   "xdf_tukey_s": 0.007118900015484542,
+   "reps": 9
+  },
+  {
+   "T": 170,
+   "N": 300,
+   "E": 44850,
+   "cbb_R100_s": 0.23824119998607785,
+   "uhac_s": 0.004946500004734844,
+   "xdf_tukey_s": 0.018290899985004216,
+   "reps": 9
+  },
+  {
+   "T": 170,
+   "N": 434,
+   "E": 93961,
+   "cbb_R100_s": 0.5604662999976426,
+   "uhac_s": 0.01191070000641048,
+   "xdf_tukey_s": 0.0439341000164859,
+   "reps": 9
+  },
+  {
+   "T": 488,
+   "N": 50,
+   "E": 1225,
+   "cbb_R100_s": 0.03222679998725653,
+   "uhac_s": 0.0008778999908827245,
+   "xdf_tukey_s": 0.0051123000448569655,
+   "reps": 9
+  },
+  {
+   "T": 488,
+   "N": 116,
+   "E": 6670,
+   "cbb_R100_s": 0.10703419998753816,
+   "uhac_s": 0.0018337999936193228,
+   "xdf_tukey_s": 0.011806300026364625,
+   "reps": 9
+  },
+  {
+   "T": 488,
+   "N": 200,
+   "E": 19900,
+   "cbb_R100_s": 0.23880759999155998,
+   "uhac_s": 0.0031922999769449234,
+   "xdf_tukey_s": 0.023288499971386045,
+   "reps": 9
+  },
+  {
+   "T": 488,
+   "N": 300,
+   "E": 44850,
+   "cbb_R100_s": 0.4215015999507159,
+   "uhac_s": 0.00563889998011291,
+   "xdf_tukey_s": 0.04697849997319281,
+   "reps": 9
+  },
+  {
+   "T": 488,
+   "N": 434,
+   "E": 93961,
+   "cbb_R100_s": 0.7738489999901503,
+   "uhac_s": 0.01007189997471869,
+   "xdf_tukey_s": 0.09816379996482283,
+   "reps": 9
+  }
+ ]
+}

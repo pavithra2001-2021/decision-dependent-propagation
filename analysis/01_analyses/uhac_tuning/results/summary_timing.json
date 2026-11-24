@@ -1,0 +1,22 @@
+{
+ "nyu2": {
+  "block_length_ms": 8.1783999921754,
+  "uhac_decision_ms": 0.9378999820910394,
+  "uhac_end_to_end_ms": 9.14440001361072,
+  "jcbb_end_to_end_ms": 38.42365002492443,
+  "xdf_end_to_end_ms": 3.887199971359223,
+  "n_runs": 20,
+  "T": 170,
+  "N": 116
+ },
+ "tcp": {
+  "block_length_ms": 34.90670002065599,
+  "uhac_decision_ms": 7.101900060661137,
+  "uhac_end_to_end_ms": 42.25639998912811,
+  "jcbb_end_to_end_ms": 583.52080010809,
+  "xdf_end_to_end_ms": 63.08120000176132,
+  "n_runs": 5,
+  "T": 488,
+  "N": 434
+ }
+}

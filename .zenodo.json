@@ -1,0 +1,25 @@
+{
+  "title": "Decision-dependent propagation of correlated feature-estimation error in connectome-based machine learning — research code",
+  "description": "Analysis code and derived per-participant summary tables for decision-level propagation of correlated feature-estimation error (circular block bootstrap and uHAC) and its evaluation on repeat brain scans from the CoRR NYU_2 site and the Transdiagnostic Connectome Project. Raw imaging data are not included; see README for the public data sources. Derived tables remain subject to the attribution terms of the source data (CC0; ODC-By v1.0). Public access is provided with copyright retained; no open-source reuse license is granted in this version.",
+  "upload_type": "software",
+  "version": "v1.0.1",
+  "creators": [
+    {
+      "name": "N., Pavithra",
+      "affiliation": "Vellore Institute of Technology"
+    },
+    {
+      "name": "Jaisankar, N.",
+      "affiliation": "Vellore Institute of Technology"
+    }
+  ],
+  "license": "other-closed",
+  "keywords": [
+    "uncertainty propagation",
+    "measurement error",
+    "functional connectivity",
+    "block bootstrap",
+    "long-run variance",
+    "test-retest reliability"
+  ]
+}

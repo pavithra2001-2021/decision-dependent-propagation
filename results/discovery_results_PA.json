@@ -1,0 +1,140 @@
+{
+ "pair": "PA",
+ "n_all": 235,
+ "n_primary": 216,
+ "flow": [
+  [
+   "parcellated series folders",
+   241
+  ],
+  [
+   "both runs present",
+   235
+  ],
+  [
+   "mean FD <= 0.2 in both runs",
+   216
+  ],
+  [
+   "all parcels finite, non-zero variance (any FD)",
+   235
+  ]
+ ],
+ "primary": {
+  "analytic_iid": {
+   "median_vcr": 0.1176443398674409,
+   "median_cov95": 0.5381754132033503,
+   "median_rho": null
+  },
+  "iid_bootstrap": {
+   "median_vcr": 0.1181566364934665,
+   "median_cov95": 0.538441481040006,
+   "median_rho": 0.0108129281749745
+  },
+  "cbb": {
+   "median_vcr": 0.2840854785303138,
+   "median_cov95": 0.7142803929289812,
+   "median_rho": 0.2577120713621139
+  },
+  "hac_bartlett": {
+   "median_vcr": 0.29426179318732293,
+   "median_cov95": 0.7178669873670991,
+   "median_rho": 0.2562613644409698
+  },
+  "H1": {
+   "median_diff_abslogvcr_cbb_minus_iid": -0.891854871771367,
+   "ci95": [
+    -0.9312631995733174,
+    -0.846426137719839
+   ],
+   "wilcoxon_p": 3.427297285516997e-37
+  },
+  "H2": {
+   "median_diff_rho_cbb_minus_iid": 0.24705198405226725,
+   "ci95": [
+    0.23980196990163524,
+    0.25857866738801827
+   ],
+   "wilcoxon_p": 3.427297285516997e-37,
+   "p_holm": 6.854594571033994e-37
+  }
+ },
+ "sensitivity_no_fd_rule": {
+  "analytic_iid": {
+   "median_vcr": 0.1166233763857581,
+   "median_cov95": 0.5353497727780675,
+   "median_rho": null
+  },
+  "iid_bootstrap": {
+   "median_vcr": 0.1171664671576268,
+   "median_cov95": 0.5355945551877906,
+   "median_rho": 0.0109944778944565
+  },
+  "cbb": {
+   "median_vcr": 0.2808765386692738,
+   "median_cov95": 0.7103266248762784,
+   "median_rho": 0.2562479044773674
+  },
+  "hac_bartlett": {
+   "median_vcr": 0.2885878726450895,
+   "median_cov95": 0.715637338895925,
+   "median_rho": 0.2551062983406234
+  },
+  "H1": {
+   "median_diff_abslogvcr_cbb_minus_iid": -0.8862241638189525,
+   "ci95": [
+    -0.9095859683174465,
+    -0.8325806535549436
+   ],
+   "wilcoxon_p": 2.645644062401821e-40
+  },
+  "H2": {
+   "median_diff_rho_cbb_minus_iid": 0.24525913811629807,
+   "ci95": [
+    0.23798841006608618,
+    0.2558255814629939
+   ],
+   "wilcoxon_p": 2.679752028897395e-40
+  }
+ },
+ "E3": {
+  "n": 216,
+  "observed_flip_rate": 0.08333333333333333,
+  "cv_auc_scanA": 0.5314847942754919,
+  "analytic_iid": {
+   "brier": 0.07740483302042982,
+   "mean_P": 0.0037721144878630607,
+   "auc": 0.6790123456790123
+  },
+  "iid_bootstrap": {
+   "brier": 0.06673668792556743,
+   "mean_P": 0.020971610600970508,
+   "auc": 0.7842312008978676
+  },
+  "cbb": {
+   "brier": 0.06697203424609682,
+   "mean_P": 0.04241207089555183,
+   "auc": 0.7884399551066218
+  },
+  "hac_bartlett": {
+   "brier": 0.07522614510455312,
+   "mean_P": 0.0058520206938213176,
+   "auc": 0.7511223344556678
+  },
+  "H3": {
+   "brier_diff_cbb_minus_iid": 0.0002353463205294025,
+   "ci95": [
+    -0.0044878410782221885,
+    0.0046059987920677396
+   ],
+   "p_two_sided": 0.8776,
+   "p_holm": 0.8776
+  }
+ },
+ "decisions": {
+  "H1": true,
+  "H2": true,
+  "H3": false
+ },
+ "protocol_sha256": "3da8f1a3693e28cd7a8666cc7be21a26c016226b8b4b5e74da98d493bc79d93a"
+}
